@@ -1,2 +1,2 @@
 print("vsasya")
-
+print("petruxa")
