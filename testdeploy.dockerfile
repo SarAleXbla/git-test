@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM amazonlinux:latest
 
 RUN apt-get -y update
 RUN apt-get -y install httpd
