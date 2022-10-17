@@ -1,4 +1,5 @@
-name: test deploy to ECR
+
+name: Docker Image CI
 
 on:
   push:
@@ -8,7 +9,7 @@ jobs:
 
   build:
 
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
 
     - name: Checkout
@@ -32,3 +33,4 @@ jobs:
         IMAGE_TAG: ${{ github.sha }}
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
