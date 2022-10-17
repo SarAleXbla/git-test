@@ -1,2 +1,0 @@
-print("vsasya")
-print("petruxa")
